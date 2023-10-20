@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+          <title>Lohnrechner</title>
+          <link rel="stylesheet" type="text/css" href="style.css">
+          <meta charset="utf-8">
+    </head>
+    <body>
+        <main>
+            <h1>Einfacher Lohnkalkulator <p id="dev">#Fixlohn geht noch nicht</p></h1>
+            <div class="spacer"></div>
+            <h2>Fix- oder Stundenlohn</h2>
+            <input type="radio" name="lohnart" value="std" onchange="L_Art()">Stundenlohn<br>
+            <input type="radio" name="lohnart" value="fix" onchange="L_Art()">Fixlohn<br>
+       
+            <div class="spacer"></div>
+            <!-- Main part -->
+            <h2 id="h2Lohn"></h2>
+              <label for="stunden">Anzahl Stunden:</label>
+              <input type="text" id="stunden" placeholder="10" min="0"><br>
+              
+              <label for="stundenlohn">Stundenlohn:</label>
+              <input type="text" id="stundenlohn" placeholder="50" min="0"><br>
+
+              <label for="Ferienentschädigung">Ferienentschädigung:</label>
+              <input type="text" id="ferienentschaedigung" placeholder="10%"><br>
+
+              <label for="Feiertagsentschädigung">Feiertagsentschädigung:</label>
+              <input type="text" id="feiertagsentschaedigung" placeholder="10%"><br>
+
+              <br><label for="brutto">Bruttolohn:</label>
+              <input type="text" id="brutto" placeholder="Bruttolohn"><br>
+
+            <h2>Abzüge</h2>
+              <label for="AHV">AHV:</label>
+              <input type="text" id="ahv" class="middleOf" placeholder="0.001-100"><br>
+              <label for="ALV">ALV:</label>
+
+              <input type="text" id="alv" class="middleOf" placeholder="0.001-100"><br>
+              <label for="KTG">KTG Beitrag:</label>
+
+              <input type="text" id="ktg" class="middleOf" placeholder="0.001-100"><br>
+              <label for="BVG">BVG Beitrag:</label>
+
+              <input type="text" id="bvg" class="middleOf" placeholder="0.001-100"><br>
+              <br><label for="abzuege">Total Abzüge:</label>
+
+              <input type="text" id="abzuege" placeholder="Abzüge"><br>
+
+            <div class="spacer"></div>
+
+            <label for="result">Nettolohn:</label>
+            <input type="text" id="result" placeholder="Nettolohn"><br>
+            
+
+            <script src="script.js"></script>  
+        </main>
+        <footer>
+            <p class="footer1">© 2023 by Noël Jörg</p>
+            <p class="footer1">Version 1.0</p> 
+            <p class="footer1">
+              <a href="https://github.com/NoelJ2077/Lohn-Kalkulator-Simple" target="_blank">
+                <i class="fab fa-github fa-beat"></i>
+              </a>
+            </p>
+        </footer>
+    </body>
+</html>
